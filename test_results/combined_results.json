@@ -1,0 +1,605 @@
+{
+  "analysis": {
+    "quality_report": {
+      "basic_info": {
+        "rows": 1010,
+        "columns": 9,
+        "memory_usage": "303543",
+        "duplicate_rows": "10"
+      },
+      "missing_data": {
+        "total_missing": "112",
+        "missing_percentage": 1.2321232123212322,
+        "columns_with_missing": {
+          "age": 61,
+          "purchase_date": 51
+        }
+      },
+      "data_types": {
+        "customer_id": "numeric",
+        "age": "numeric",
+        "income": "numeric",
+        "category": "categorical",
+        "purchase_date": "text",
+        "product_name": "categorical",
+        "rating": "categorical_numeric",
+        "is_premium": "categorical_numeric",
+        "notes": "text"
+      },
+      "outliers": {
+        "customer_id": {
+          "count": 0,
+          "percentage": 0.0
+        },
+        "age": {
+          "count": 54,
+          "percentage": 5.346534653465347
+        },
+        "income": {
+          "count": 37,
+          "percentage": 3.663366336633663
+        },
+        "rating": {
+          "count": 51,
+          "percentage": 5.0495049504950495
+        }
+      },
+      "statistics": {
+        "numeric_stats": {
+          "customer_id": {
+            "count": 1010.0,
+            "mean": 494.5990099009901,
+            "std": 291.5379447685176,
+            "min": 0.0,
+            "25%": 242.25,
+            "50%": 494.5,
+            "75%": 746.75,
+            "max": 999.0
+          },
+          "age": {
+            "count": 949.0,
+            "mean": 44.12006411028492,
+            "std": 38.35650123123371,
+            "min": 2.587326599309272,
+            "25%": 29.106352430557884,
+            "50%": 35.91760776535502,
+            "75%": 42.91662693962936,
+            "max": 200.0
+          },
+          "income": {
+            "count": 1010.0,
+            "mean": 24391.189737711233,
+            "std": 14366.790560603617,
+            "min": -1000.0,
+            "25%": 15577.890835334643,
+            "50%": 21839.940589913072,
+            "75%": 30913.758316567,
+            "max": 108722.47178788802
+          },
+          "rating": {
+            "count": 1010.0,
+            "mean": 3.398019801980198,
+            "std": 2.04459597119701,
+            "min": 1.0,
+            "25%": 2.0,
+            "50%": 3.0,
+            "75%": 4.0,
+            "max": 10.0
+          }
+        },
+        "categorical_stats": {
+          "category": {
+            "unique_values": 5,
+            "most_common": "A",
+            "value_counts": {
+              "A": 258,
+              "D": 237,
+              "B": 233,
+              "C": 231,
+              "INVALID": 51
+            }
+          },
+          "purchase_date": {
+            "unique_values": 949,
+            "most_common": "2023-01-01",
+            "value_counts": {
+              "2023-01-01": 2,
+              "2023-01-03": 2,
+              "2023-01-04": 2,
+              "2023-01-05": 2,
+              "2023-01-06": 2,
+              "2023-01-07": 2,
+              "2023-01-08": 2,
+              "2023-01-09": 2,
+              "2023-01-10": 2,
+              "2023-01-02": 2
+            }
+          },
+          "product_name": {
+            "unique_values": 4,
+            "most_common": "Product C",
+            "value_counts": {
+              "Product C": 266,
+              "Product B": 256,
+              "Product D": 248,
+              "Product A": 240
+            }
+          },
+          "notes": {
+            "unique_values": 1000,
+            "most_common": "Note for customer 0",
+            "value_counts": {
+              "Note for customer 0": 2,
+              "Note for customer 6": 2,
+              "Note for customer 9": 2,
+              "Note for customer 8": 2,
+              "Note for customer 7": 2,
+              "Note for customer 1": 2,
+              "Note for customer 5": 2,
+              "Note for customer 3": 2,
+              "Note for customer 2": 2,
+              "Note for customer 4": 2
+            }
+          }
+        }
+      }
+    },
+    "visualizations": {
+      "missing_heatmap": "Figure(1200x600)",
+      "data_types": "Figure(1000x600)",
+      "correlation": "Figure(1200x1000)",
+      "numeric_distributions": "Figure(1500x1000)",
+      "categorical_analysis": "Figure(1500x1000)"
+    },
+    "dashboard": "Figure({\n    'data': [{'name': 'customer_id',\n              'opacity': 0.7,\n              'type': 'histogram',\n              'x': {'bdata': ('AAABAAIAAwAEAAUABgAHAAgACQAKAA' ... 'MAAAEAAgADAAQABQAGAAcACAAJAA=='),\n                    'dtype': 'i2'},\n              'xaxis': 'x',\n              'yaxis': 'y'},\n             {'name': 'age',\n              'opacity': 0.7,\n              'type': 'histogram',\n              'x': {'bdata': ('AAAAAAAA+H8AAAAAAAD4fwAAAAAAAP' ... 'AAAPh/AAAAAAAA+H8AAAAAAAD4fw=='),\n                    'dtype': 'f8'},\n              'xaxis': 'x',\n              'yaxis': 'y'},\n             {'name': 'income',\n              'opacity': 0.7,\n              'type': 'histogram',\n              'x': {'bdata': ('lm/L/rGm5UDVqqh3jxPhQJKJyu9EKd' ... 'QHjd1A5vukPlAt4kDC9IosqnXQQA=='),\n                    'dtype': 'f8'},\n              'xaxis': 'x',\n              'yaxis': 'y'},\n             {'name': 'rating',\n              'opacity': 0.7,\n              'type': 'histogram',\n              'x': {'bdata': ('AwQFAgMEBAEBAgECBQIBBQECAwQBAg' ... 'EBAgUFBQIFAwIDAgMEBQIDBAQBAQI='),\n                    'dtype': 'i1'},\n              'xaxis': 'x',\n              'yaxis': 'y'},\n             {'name': 'category',\n              'type': 'bar',\n              'x': array(['A', 'D', 'B', 'C', 'INVALID'], dtype=object),\n              'xaxis': 'x2',\n              'y': {'bdata': 'AgHtAOkA5wAzAA==', 'dtype': 'i2'},\n              'yaxis': 'y2'},\n             {'name': 'purchase_date',\n              'type': 'bar',\n              'x': array(['2023-01-01', '2023-01-03', '2023-01-04', '2023-01-05', '2023-01-06',\n                          '2023-01-07', '2023-01-08', '2023-01-09', '2023-01-10', '2023-01-02'],\n                         dtype=object),\n              'xaxis': 'x2',\n              'y': {'bdata': 'AgICAgICAgICAg==', 'dtype': 'i1'},\n              'yaxis': 'y2'},\n             {'name': 'product_name',\n              'type': 'bar',\n              'x': array(['Product C', 'Product B', 'Product D', 'Product A'], dtype=object),\n              'xaxis': 'x2',\n              'y': {'bdata': 'CgEAAfgA8AA=', 'dtype': 'i2'},\n              'yaxis': 'y2'},\n             {'colorscale': [[0.0, 'rgb(103,0,31)'], [0.1, 'rgb(178,24,43)'],\n                             [0.2, 'rgb(214,96,77)'], [0.3, 'rgb(244,165,130)'],\n                             [0.4, 'rgb(253,219,199)'], [0.5, 'rgb(247,247,247)'],\n                             [0.6, 'rgb(209,229,240)'], [0.7, 'rgb(146,197,222)'],\n                             [0.8, 'rgb(67,147,195)'], [0.9, 'rgb(33,102,172)'],\n                             [1.0, 'rgb(5,48,97)']],\n              'type': 'heatmap',\n              'x': array(['customer_id', 'age', 'income', 'rating'], dtype=object),\n              'xaxis': 'x3',\n              'y': array(['customer_id', 'age', 'income', 'rating'], dtype=object),\n              'yaxis': 'y3',\n              'z': {'bdata': ('AAAAAAAA8D9/TGsBG5/Pv4Cf5hKCpr' ... 'VuZbS2v1v9Ew8d860/AAAAAAAA8D8='),\n                    'dtype': 'f8',\n                    'shape': '4, 4'},\n              'zmid': 0}],\n    'layout': {'annotations': [{'font': {'size': 16},\n                                'showarrow': False,\n                                'text': 'Numeric Distributions',\n                                'x': 0.5,\n                                'xanchor': 'center',\n                                'xref': 'paper',\n                                'y': 1.0,\n                                'yanchor': 'bottom',\n                                'yref': 'paper'},\n                               {'font': {'size': 16},\n                                'showarrow': False,\n                                'text': 'Categorical Analysis',\n                                'x': 0.5,\n                                'xanchor': 'center',\n                                'xref': 'paper',\n                                'y': 0.6333333333333333,\n                                'yanchor': 'bottom',\n                                'yref': 'paper'},\n                               {'font': {'size': 16},\n                                'showarrow': False,\n                                'text': 'Correlation Matrix',\n                                'x': 0.5,\n                                'xanchor': 'center',\n                                'xref': 'paper',\n                                'y': 0.26666666666666666,\n                                'yanchor': 'bottom',\n                                'yref': 'paper'}],\n               'height': 900,\n               'showlegend': True,\n               'template': '...',\n               'title': {'text': 'Interactive Data Analysis Dashboard'},\n               'xaxis': {'anchor': 'y', 'domain': [0.0, 1.0]},\n               'xaxis2': {'anchor': 'y2', 'domain': [0.0, 1.0]},\n               'xaxis3': {'anchor': 'y3', 'domain': [0.0, 1.0]},\n               'yaxis': {'anchor': 'x', 'domain': [0.7333333333333334, 1.0]},\n               'yaxis2': {'anchor': 'x2', 'domain': [0.3666666666666667, 0.6333333333333333]},\n               'yaxis3': {'anchor': 'x3', 'domain': [0.0, 0.26666666666666666]}}\n})",
+    "profiling_report": null,
+    "summary": {
+      "timestamp": "2025-07-10T10:17:49.301896",
+      "data_shape": [
+        1010,
+        9
+      ],
+      "data_types": {
+        "customer_id": "numeric",
+        "age": "numeric",
+        "income": "numeric",
+        "category": "categorical",
+        "purchase_date": "text",
+        "product_name": "categorical",
+        "rating": "categorical_numeric",
+        "is_premium": "categorical_numeric",
+        "notes": "text"
+      },
+      "quality_report": {
+        "basic_info": {
+          "rows": 1010,
+          "columns": 9,
+          "memory_usage": "303543",
+          "duplicate_rows": "10"
+        },
+        "missing_data": {
+          "total_missing": "112",
+          "missing_percentage": 1.2321232123212322,
+          "columns_with_missing": {
+            "age": 61,
+            "purchase_date": 51
+          }
+        },
+        "data_types": {
+          "customer_id": "numeric",
+          "age": "numeric",
+          "income": "numeric",
+          "category": "categorical",
+          "purchase_date": "text",
+          "product_name": "categorical",
+          "rating": "categorical_numeric",
+          "is_premium": "categorical_numeric",
+          "notes": "text"
+        },
+        "outliers": {
+          "customer_id": {
+            "count": 0,
+            "percentage": 0.0
+          },
+          "age": {
+            "count": 54,
+            "percentage": 5.346534653465347
+          },
+          "income": {
+            "count": 37,
+            "percentage": 3.663366336633663
+          },
+          "rating": {
+            "count": 51,
+            "percentage": 5.0495049504950495
+          }
+        },
+        "statistics": {
+          "numeric_stats": {
+            "customer_id": {
+              "count": 1010.0,
+              "mean": 494.5990099009901,
+              "std": 291.5379447685176,
+              "min": 0.0,
+              "25%": 242.25,
+              "50%": 494.5,
+              "75%": 746.75,
+              "max": 999.0
+            },
+            "age": {
+              "count": 949.0,
+              "mean": 44.12006411028492,
+              "std": 38.35650123123371,
+              "min": 2.587326599309272,
+              "25%": 29.106352430557884,
+              "50%": 35.91760776535502,
+              "75%": 42.91662693962936,
+              "max": 200.0
+            },
+            "income": {
+              "count": 1010.0,
+              "mean": 24391.189737711233,
+              "std": 14366.790560603617,
+              "min": -1000.0,
+              "25%": 15577.890835334643,
+              "50%": 21839.940589913072,
+              "75%": 30913.758316567,
+              "max": 108722.47178788802
+            },
+            "rating": {
+              "count": 1010.0,
+              "mean": 3.398019801980198,
+              "std": 2.04459597119701,
+              "min": 1.0,
+              "25%": 2.0,
+              "50%": 3.0,
+              "75%": 4.0,
+              "max": 10.0
+            }
+          },
+          "categorical_stats": {
+            "category": {
+              "unique_values": 5,
+              "most_common": "A",
+              "value_counts": {
+                "A": 258,
+                "D": 237,
+                "B": 233,
+                "C": 231,
+                "INVALID": 51
+              }
+            },
+            "purchase_date": {
+              "unique_values": 949,
+              "most_common": "2023-01-01",
+              "value_counts": {
+                "2023-01-01": 2,
+                "2023-01-03": 2,
+                "2023-01-04": 2,
+                "2023-01-05": 2,
+                "2023-01-06": 2,
+                "2023-01-07": 2,
+                "2023-01-08": 2,
+                "2023-01-09": 2,
+                "2023-01-10": 2,
+                "2023-01-02": 2
+              }
+            },
+            "product_name": {
+              "unique_values": 4,
+              "most_common": "Product C",
+              "value_counts": {
+                "Product C": 266,
+                "Product B": 256,
+                "Product D": 248,
+                "Product A": 240
+              }
+            },
+            "notes": {
+              "unique_values": 1000,
+              "most_common": "Note for customer 0",
+              "value_counts": {
+                "Note for customer 0": 2,
+                "Note for customer 6": 2,
+                "Note for customer 9": 2,
+                "Note for customer 8": 2,
+                "Note for customer 7": 2,
+                "Note for customer 1": 2,
+                "Note for customer 5": 2,
+                "Note for customer 3": 2,
+                "Note for customer 2": 2,
+                "Note for customer 4": 2
+              }
+            }
+          }
+        }
+      },
+      "analysis_complete": true
+    }
+  },
+  "testing": {
+    "timestamp": "2025-07-10T10:17:49.301896",
+    "data_integrity": {
+      "timestamp": "2025-07-10T10:17:49.301896",
+      "total_rows": 1010,
+      "total_columns": 9,
+      "duplicate_rows": "10",
+      "missing_data": {
+        "total_missing": "112",
+        "missing_percentage": 1.2321232123212322,
+        "columns_with_missing": {
+          "age": 61,
+          "purchase_date": 51
+        }
+      },
+      "data_types": {
+        "customer_id": "int64",
+        "age": "float64",
+        "income": "float64",
+        "category": "object",
+        "purchase_date": "object",
+        "product_name": "object",
+        "rating": "int64",
+        "is_premium": "bool",
+        "notes": "object"
+      },
+      "constraints_violations": {
+        "constant_columns": [],
+        "high_cardinality_columns": [
+          "customer_id",
+          "age",
+          "income",
+          "purchase_date",
+          "notes"
+        ]
+      },
+      "anomalies": {}
+    },
+    "numeric_tests": {
+      "outliers": {
+        "customer_id": {
+          "count": 0,
+          "percentage": 0.0,
+          "outlier_values": []
+        },
+        "age": {
+          "count": 54,
+          "percentage": 5.690200210748156,
+          "outlier_values": [
+            200.0,
+            200.0,
+            200.0,
+            200.0,
+            200.0,
+            200.0,
+            200.0,
+            200.0,
+            200.0,
+            200.0
+          ]
+        },
+        "income": {
+          "count": 37,
+          "percentage": 3.663366336633663,
+          "outlier_values": [
+            62170.160961400186,
+            64288.444340344,
+            62216.40511493237,
+            67928.97158065368,
+            69249.50571228468,
+            74598.539120847,
+            64381.04676511177,
+            66520.23730977906,
+            80005.82062542897,
+            70239.40589024566
+          ]
+        },
+        "rating": {
+          "count": 51,
+          "percentage": 5.0495049504950495,
+          "outlier_values": [
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10
+          ]
+        }
+      },
+      "statistics": {
+        "customer_id": {
+          "mean": 494.5990099009901,
+          "median": 494.5,
+          "std": 291.5379447685176,
+          "min": "0",
+          "max": "999",
+          "skewness": 0.0019252275059335007,
+          "kurtosis": -1.2025209498867828
+        },
+        "age": {
+          "mean": 44.120064110284915,
+          "median": 35.91760776535502,
+          "std": 38.35650123123371,
+          "min": 2.587326599309272,
+          "max": 200.0,
+          "skewness": 3.565567851513584,
+          "kurtosis": 11.79127926626001
+        },
+        "income": {
+          "mean": 24391.189737711233,
+          "median": 21839.940589913072,
+          "std": 14366.790560603617,
+          "min": -1000.0,
+          "max": 108722.47178788802,
+          "skewness": 1.2050838671743238,
+          "kurtosis": 3.2994397256713075
+        },
+        "rating": {
+          "mean": 3.398019801980198,
+          "median": 3.0,
+          "std": 2.04459597119701,
+          "min": "1",
+          "max": "10",
+          "skewness": 1.4534388198961883,
+          "kurtosis": 2.971051445592087
+        }
+      },
+      "distribution_tests": {
+        "customer_id": {
+          "is_normal": "True",
+          "has_negative_values": "False",
+          "has_zero_values": "True"
+        },
+        "age": {
+          "is_normal": "False",
+          "has_negative_values": "False",
+          "has_zero_values": "False"
+        },
+        "income": {
+          "is_normal": "False",
+          "has_negative_values": "True",
+          "has_zero_values": "False"
+        },
+        "rating": {
+          "is_normal": "False",
+          "has_negative_values": "False",
+          "has_zero_values": "False"
+        }
+      },
+      "correlation_issues": {
+        "high_correlations": []
+      }
+    },
+    "categorical_tests": {
+      "cardinality": {
+        "category": {
+          "unique_count": 5,
+          "is_high_cardinality": false,
+          "is_low_cardinality": true
+        },
+        "purchase_date": {
+          "unique_count": 949,
+          "is_high_cardinality": true,
+          "is_low_cardinality": false
+        },
+        "product_name": {
+          "unique_count": 4,
+          "is_high_cardinality": false,
+          "is_low_cardinality": true
+        },
+        "notes": {
+          "unique_count": 1000,
+          "is_high_cardinality": true,
+          "is_low_cardinality": false
+        }
+      },
+      "value_distribution": {
+        "category": {
+          "most_common": "A",
+          "least_common": "INVALID",
+          "top_5_values": {
+            "A": 258,
+            "D": 237,
+            "B": 233,
+            "C": 231,
+            "INVALID": 51
+          },
+          "imbalance_ratio": 5.0588235294117645
+        },
+        "purchase_date": {
+          "most_common": "2023-01-01",
+          "least_common": "2025-09-26",
+          "top_5_values": {
+            "2023-01-01": 2,
+            "2023-01-03": 2,
+            "2023-01-04": 2,
+            "2023-01-05": 2,
+            "2023-01-06": 2
+          },
+          "imbalance_ratio": 2.0
+        },
+        "product_name": {
+          "most_common": "Product C",
+          "least_common": "Product A",
+          "top_5_values": {
+            "Product C": 266,
+            "Product B": 256,
+            "Product D": 248,
+            "Product A": 240
+          },
+          "imbalance_ratio": 1.1083333333333334
+        },
+        "notes": {
+          "most_common": "Note for customer 0",
+          "least_common": "Note for customer 999",
+          "top_5_values": {
+            "Note for customer 0": 2,
+            "Note for customer 6": 2,
+            "Note for customer 9": 2,
+            "Note for customer 8": 2,
+            "Note for customer 7": 2
+          },
+          "imbalance_ratio": 2.0
+        }
+      },
+      "encoding_issues": {
+        "category": [],
+        "purchase_date": [],
+        "product_name": [
+          "mixed_case"
+        ],
+        "notes": [
+          "mixed_case"
+        ]
+      },
+      "consistency_issues": {
+        "category": [],
+        "purchase_date": [],
+        "product_name": [],
+        "notes": []
+      }
+    },
+    "datetime_tests": {
+      "date_ranges": {},
+      "format_consistency": {},
+      "missing_periods": {},
+      "anomalies": {}
+    },
+    "consistency_tests": {
+      "cross_column_validation": {},
+      "business_rules": {},
+      "referential_integrity": {}
+    },
+    "summary": {
+      "total_issues": 2,
+      "critical_issues": 0,
+      "warnings": 2,
+      "recommendations": [
+        "WARNING: Column 'purchase_date' has high cardinality (>50 unique values)",
+        "WARNING: Column 'notes' has high cardinality (>50 unique values)"
+      ]
+    }
+  },
+  "summary": {
+    "data_overview": {
+      "rows": 1010,
+      "columns": 9,
+      "missing_percentage": 1.2321232123212322
+    },
+    "quality_score": 95.0869086908691,
+    "issues_summary": {
+      "critical_issues": 0,
+      "warnings": 2,
+      "total_issues": 2
+    },
+    "recommendations": [
+      "WARNING: Column 'purchase_date' has high cardinality (>50 unique values)",
+      "WARNING: Column 'notes' has high cardinality (>50 unique values)"
+    ]
+  }
+}
